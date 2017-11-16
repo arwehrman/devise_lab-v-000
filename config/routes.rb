@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: "welcome#home"
-  get '/home' => "welcome#home"
+  root "welcome#home"
   get '/about' => 'welcome#about'
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   # The priority is based upon order of creation: first created -> highest priority.
